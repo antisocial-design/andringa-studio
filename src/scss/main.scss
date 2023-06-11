@@ -26,7 +26,8 @@ body {
   // padding-right: 3rem;
   max-width: 1440px;
   @include min-1024 {
-    padding: 0rem 9rem;
+    padding-left: 9rem;
+    padding-right: 9rem;
   }
 }
 

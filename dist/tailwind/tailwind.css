@@ -765,14 +765,14 @@ video {
   width: 100%;
 }
 
-.columns-2 {
-  -moz-columns: 2;
-       columns: 2;
-}
-
 .columns-1 {
   -moz-columns: 1;
        columns: 1;
+}
+
+.columns-2 {
+  -moz-columns: 2;
+       columns: 2;
 }
 
 .grid-cols-1 {
@@ -2651,7 +2651,8 @@ html,body{
 
 @media screen and (min-width: 1024px){
   .container{
-    padding:0rem 9rem
+    padding-left:9rem;
+    padding-right:9rem
   }
 }
 
