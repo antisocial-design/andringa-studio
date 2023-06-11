@@ -1,0 +1,23 @@
+{% set active_language = function('pll_current_language') %}
+{% set pll_languages = [] %}
+
+{% for language in function('icl_get_languages', {'skip_missing': 0}) %}
+	{% if language.language_code != active_language %}
+		{% set language_data = {'slug': language.language_code, 'url': language.url, 'name': language.native_name} %}
+		{% set pll_languages = pll_languages|merge([language_data]) %}
+	{% endif %}
+{% endfor %}
+
+{% if pll_languages is iterable %}
+
+	{% for language in pll_languages %}
+
+		<a class="main menu-item uppercase hover:font-bold" hreflang="{{ language.slug }}" href="{{ language.url }}" title="{{ language.name }}">
+
+			<h6>{{ language.slug }}</h6>
+
+		</a>
+
+	{% endfor %}
+
+{% endif %}

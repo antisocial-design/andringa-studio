@@ -1,0 +1,9 @@
+{% if item.image %}
+	{% set imgURL = item.image.url %}
+{% else %}
+	{% set imgURL = Image(item.project.thumbnail).src %}
+{% endif %}
+
+<a href="{{item.project.link}}" class="image-container aspect-[16/7]">
+	<img src="{{ imgURL }}" alt="{{item.project.title}}">
+</a>

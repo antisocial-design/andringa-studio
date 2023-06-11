@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html {{fn('language_attributes')}}>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		{% include 'seo/seo.twig' %}
+
+		{{ wp_head }}
+	</head>
+
+	<body>
+		{% if top_ads or has_ads %}
+			{% for ad in ads %}
+				{% if ad.top_image %}
+					{% include 'includes/ads/top.twig'%}
+				{% endif %}
+			{% endfor %}
+		{% endif %}
+
+		{% include 'includes/header.twig' %}
+
+		{% block content %}
+		{% endblock %}
+
+		{% if bottom_ads or has_ads %}
+			{% for ad in ads %}
+				{% if ad.bottom_image %}
+					{% include 'includes/ads/bottom.twig'%}
+				{% endif %}
+			{% endfor %}
+		{% endif %}
+
+		{% include 'includes/footer.twig' %}
+
+		{{ wp_footer }}
+		
+	</body>
+</html>

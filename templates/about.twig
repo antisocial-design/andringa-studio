@@ -1,0 +1,79 @@
+{% extends "general.twig" %}
+
+{% block content %}
+
+	{% set hero = post.meta('hero') %}
+	{% set section_1 = post.meta('section_1') %}
+	{% set section_2 = post.meta('section_2') %}
+	{% set section_3 = post.meta('section_3') %}
+
+
+	{% if hero %}
+		<div id="hero" class="mb-48">
+			<div class="image-container aspect-[16/7]">
+				<img src="{{Image(hero.image).src}}">
+			</div>
+		</div>
+	{% endif %}
+
+	{% if section_1 %}
+
+		<div class="container my-36">
+			<div class="grid grid-cols-1 1024:grid-cols-2 gap-20">
+				<div class="col-span-1 1024:col-span-2 mb-16">
+					<h1 class="font-bold">{{section_1.title}}</h1>
+					<h5>{{section_1.subtitle}}</h5>
+				</div>
+
+				<div class="col-span-1 1024:order-3">
+					<div class="image-container aspect-[6/7]">
+						<img class="align-top" src="{{ Image(section_1.image).src }}">
+					</div>
+				</div>
+				<div class="col-span-1">
+					{{section_1.text | wpautop}}
+				</div>
+			</div>
+		</div>
+
+	{% endif %}
+
+	{% if section_2 %}
+		<div class="w-full bg-darksand">
+			<div class="container text-center py-52">
+				<h3 class="type-bodoni">
+					{{section_2.quote}}
+				</h3>
+			</div>
+		</div>
+
+	{% endif %}
+
+	<div class="container mt-52">
+		<div class="text-center mb-36">
+			<h1 class="uppercase font-bold">Team</h1>
+		</div>
+		{% for member in team %}
+			<div class="grid grid-cols-1 1024:grid-cols-2 gap-20 mb-36 ">
+				{% include 'loop/team.twig' %}
+			</div>
+		{% endfor %}
+	</div>
+
+	{% if section_3 %}
+
+		<div class="container text-center pt-18">
+			<h3 class="mb-12">
+				{{section_3.title}}
+			</h3>
+			<h4>
+				{{section_3.text}}
+			</h4>
+		</div>
+
+	{% endif %}
+
+	<div class="mb-52"></div>
+
+
+{% endblock %}

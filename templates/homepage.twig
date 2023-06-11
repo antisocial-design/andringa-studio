@@ -1,0 +1,106 @@
+{% extends "general.twig" %}
+
+{% block content %}
+
+	{% set section_1 = post.meta('section_1') %}
+	{% set portfolio = post.meta('portfolio') %}
+	{% set section_2 = post.meta('section_2') %}
+	{% set section_3 = post.meta('section_3') %}
+
+	<div id="hero" class="slider">
+
+		{% for item in post.meta('slider') %}
+			{% include 'includes/slide.twig' %}
+		{% endfor %}
+
+	</div>
+
+	{% if section_1 %}
+
+		<div class="container mt-36">
+			<div class="grid grid-cols-1 1024:grid-cols-2 gap-20">
+				<div class="col-span-1 1024:order-2">
+					<div class="image-container aspect-[6/7]">
+						<img class="align-top" src="{{ Image(section_1.image).src }}">
+					</div>
+				</div>
+				<div class="col-span-1 text-container">
+					<h2 class="mb-16 font-bold">{{section_1.title}}</h2>
+					{{section_1.text | wpautop}}
+					<div class="my-16">
+						<a href="{{section_1.link.link}}" class="rounded-icon bg-sand text-white">
+							<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="1" stroke-linecap="square" stroke-linejoin="arcs">
+								<line x1="12" y1="5" x2="12" y2="19"></line>
+								<line x1="5" y1="12" x2="19" y2="12"></line>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="separator my-36 flex">
+				<div class="mx-auto w-10/12 border border-t-1 border-b-0 border-gray"></div>
+			</div>
+		</div>
+
+	{% endif %}
+
+	{% if portfolio %}
+		<div class="container">
+			<div class="text-center mb-20">
+				<h2 class="font-bold">Portfolio</h2>
+			</div>
+			<div class="columns-1 1024:columns-3 1024:gap-16" id="post-list">
+				{% for project in portfolio.works %}
+					{% include 'loop/masonry.twig' %}
+				{% endfor %}
+			</div>
+			<div class="text-center mt-20 mb-36">
+				<a href="/portfolio">
+					<h5>See more</h4>
+				</a>
+			</div>
+		</div>
+	{% endif %}
+
+	{% if section_2 %}
+
+		<div class="w-full bg-darksand py-56">
+			<div class="container">
+				<div class="grid grid-cols-1 1024:grid-cols-2 gap-20">
+					<div class="col-span-1 1024:order-2">
+						<div class="image-container aspect-[6/7]">
+							<img src="{{ Image(section_2.image).src }}">
+						</div>
+					</div>
+					<div class="col-span-1">
+						<h2 class="mb-16 font-bold">{{section_2.title}}</h2>
+						{{section_2.text | wpautop}}
+						<div class="my-16">
+							<a href="{{section_2.link.link}}" class="rounded-icon bg-sand text-white">
+								<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="1" stroke-linecap="square" stroke-linejoin="arcs">
+									<line x1="12" y1="5" x2="12" y2="19"></line>
+									<line x1="5" y1="12" x2="19" y2="12"></line>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	{% endif %}
+
+	{% if section_3 %}
+
+		<div class="container text-center pt-52">
+			<h3 class="type-bodoni">
+				{{section_3.quote}}
+			</h3>
+		</div>
+
+	{% endif %}
+
+	<div class="mb-52"></div>
+
+
+{% endblock %}

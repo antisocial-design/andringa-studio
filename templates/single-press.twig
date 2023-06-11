@@ -1,0 +1,68 @@
+{% extends "general.twig" %}
+
+{% block content %}
+
+	<div id="hero" class="mb-48">
+		<div class="image-container aspect-[16/7]">
+			<img src="{{Image(post.hero_image).src}}">
+		</div>
+	</div>
+
+
+	<div class="container mb-40 mt-18">
+		<article class="col-span-1 portfolio_content text-dark">
+			{{post.content}}
+		</article>
+	</div>
+
+	<div class="container my-52">
+
+		<div class="grid 1024:grid-cols-5 gap-8 mb-20 border-t border-dark pt-32">
+
+			<div class="1024:col-span-2">
+				<div class="section-image aspect-[16/4] image-container text-center">
+					<a class="w-full flex" href="{{ post.prev.link }}">
+						<h4 class="text text-sand m-auto">
+							previous
+							{% if post.type == 'work' %}
+								project
+							{% else %}
+								article
+							{% endif %}
+						</h4>
+					</a>
+				</div>
+			</div>
+
+			<div class="1024:col-span-1">
+
+				<div class="grid grid-cols-2 h-full">
+					<div class="col-span-1 border-r border-dark h-full"></div>
+
+				</div>
+			</div>
+
+			<div class="1024:col-span-2">
+
+				<div class="section-image aspect-[16/4] image-container text-center">
+					<a class="w-full flex" href="{{ post.next.link }}">
+						<h4 class="text text-sand m-auto">
+							next
+							{% if post.type == 'work' %}
+								project
+							{% else %}
+								article
+							{% endif %}
+
+						</h4>
+					</a>
+				</div>
+			</div>
+
+		</div>
+
+
+	</div>
+
+
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "general.twig" %}
+
+{% block content %}
+
+	<div id="hero" class="mb-48">
+
+		<div class="image-container aspect-[16/7]">
+			<img src="{{Image(post.image).src}}" alt="{{item.project.title}}">
+		</div>
+
+	</div>
+
+	<div class="container">
+
+		<div class="grid grid-cols-1 1024:grid-cols-4 gap-20">
+			{% for post in press %}
+				{% include 'loop/post.twig' %}
+			{% endfor %}
+		</div>
+	</div>
+
+	<div class="mb-52"></div>
+
+
+{% endblock %}

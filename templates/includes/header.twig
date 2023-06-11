@@ -1,0 +1,28 @@
+<div class="header bg-white w-full">
+	<div class="container py-12">
+		<div class="grid grid-cols-2">
+			<div class="col-span-1">
+				<a href="{{site.url}}"><img style="max-width:200px" src="{{theme.link}}/assets/imgs/logo.svg"></a>
+			</div>
+
+
+			<div class="col-span-1 flex">
+				<div class="text-right my-auto ml-auto flex gap-12">
+					{% for item in main_menu.get_items %}
+						<a class="main menu-item uppercase hover:font-bold" href="{{ item.link }}">
+							<h6>{{item.title}}</h6>
+						</a>
+					{% endfor %}
+
+					<div class="vertical-sep border-r border-dark"></div>
+
+					{% include 'includes/language-selector.twig' %}
+
+
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+</div>

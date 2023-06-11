@@ -1,0 +1,26 @@
+<div class="col-span-1 {% if loop.index is odd %} 1024:order-2{% else %} 1024:order-1{% endif %}">
+
+
+	<div class="section-image aspect-[3/4] image-container">
+		<img src="{{ Image(member.thumbnail).src }}">
+	</div>
+</div>
+<div class="col-span-1 {% if loop.index is odd %} 1024:order-1{% else %} 1024:order-2{% endif %}">
+
+
+	<h4>{{member.title}}</h4>
+	<h5 class="mt-4">{{member.subtitle}}</h5>
+	<h6 class="uppercase mt-12 mb-4">{{member.position}}</h6>
+	<h6>{{member.text | wpautop}}</h6>
+
+	{% if member.email %}
+		<div class="socials mt-8">
+			<a href="mailto:{{member.email}}" class="rounded-icon-email border border-dark text-dark">
+				<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="arcs">
+					<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+					<polyline points="22,6 12,13 2,6"></polyline>
+				</svg>
+			</a>
+		</div>
+	{% endif %}
+</div>
