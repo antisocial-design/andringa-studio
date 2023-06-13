@@ -803,6 +803,14 @@ video {
   gap: 2rem;
 }
 
+.gap-14 {
+  gap: 3.5rem;
+}
+
+.gap-24 {
+  gap: 6rem;
+}
+
 .border {
   border-width: 1px;
 }
@@ -2674,7 +2682,7 @@ h2,h2 p{
 
 h3,h3 p{
   font-size:clamp(1.2rem, calc( .95484rem + 3.22581vw), 5.6rem);
-  line-height:110%
+  line-height:120%
 }
 
 h4,h4 p{
@@ -2683,13 +2691,13 @@ h4,h4 p{
 }
 
 h5,h5 p{
-  font-size:clamp(1.2rem, calc( 1.09971rem + 1.31965vw), 3rem);
+  font-size:clamp(1.2rem, calc( 1.11085rem + 1.17302vw), 2.8rem);
   line-height:110%
 }
 
 h6,h6 p{
   font-size:clamp(1.2rem, calc( 1.15543rem + .58651vw), 2rem);
-  line-height:140%
+  line-height:150%
 }
 
 p{

@@ -1,7 +1,7 @@
 {% if customTitle is defined %}
-    {% set pageTitle = customTitle %}
+	{% set pageTitle = customTitle %}
 {% else %}
-    {% set pageTitle = post.title %}
+	{% set pageTitle = post.title %}
 {% endif %}
 
 {# {% set tagGA = 'G-BEY70D8TVM' %} #}
@@ -9,27 +9,32 @@
 <meta property="og:type" content="website"/>
 <meta name="twitter:card" content="summary">
 
-<title>{{ pageTitle }} — {{ site.name }}</title>
+<title>{{ pageTitle }}
+	—
+	{{ site.name }}</title>
 <meta property="og:title" content="{{ pageTitle }} — {{ site.name }}">
-<meta name="twitter:title" content="{{ pageTitle }} — {{ site.name }}">
+<meta
+name="twitter:title" content="{{ pageTitle }} — {{ site.name }}">
 
-<meta name="description" content="{{ 'Descrição da Página' }}">
+{# <meta name="description" content="{{ 'Descrição da Página' }}">
 <meta property="og:description" content="{{ 'Descrição da Página' }}">
 <meta name="twitter:description" content="{{ 'Descrição da Página' }}">
 
 <meta property="og:image" content="{{ 'Imagem da Página' }}">
-<meta name="twitter:image" content="{{ 'Imagem da Página' }}">
+<meta name="twitter:image" content="{{ 'Imagem da Página' }}"> #}
 
 <meta property="og:url" content="{{post.link}}">
 
 {% if tagGA is defined %}
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id={{tagGA}}"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id={{tagGA}}"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+function gtag() {
+dataLayer.push(arguments);
+}
+gtag('js', new Date());
 
-    gtag('config', '{{tagGA}}');
-</script>
+gtag('config', '{{ tagGA }}');
+	</script>
 {% endif %}
