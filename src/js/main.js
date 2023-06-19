@@ -47,6 +47,14 @@ const init = () => {
       //
     });
   });
+  jQuery(document).ready(function ($) {
+    $(document).ready(function () {
+      $(".hamburger").click(function () {
+        $(this).toggleClass("is-active");
+        $(".mobile-menu").toggleClass("active");
+      });
+    });
+  });
 };
 
 init();

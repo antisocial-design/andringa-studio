@@ -2,9 +2,9 @@
 
 {% block content %}
 
-	<div id="hero" class="mb-48">
+	<div id="hero" class="mb-20 1024:mb-48">
 
-		<div class="image-container aspect-[16/7]">
+		<div class="image-container aspect-[4/6] 1024:aspect-[16/7]">
 			<img src="{{Image(post.image).src}}" alt="{{item.project.title}}">
 		</div>
 
@@ -12,14 +12,14 @@
 
 	<div class="container">
 
-		<div class="grid grid-cols-1 1024:grid-cols-4 gap-24">
+		<div class="grid grid-cols-1 1024:grid-cols-4 gap-24 text-container">
 			{% for post in press %}
 				{% include 'loop/post.twig' %}
 			{% endfor %}
 		</div>
 	</div>
 
-	<div class="mb-52"></div>
+	<div class="mb-20 1024:mb-52"></div>
 
 
 {% endblock %}

@@ -19,11 +19,7 @@
 
 		<div class="container mt-36">
 			<div class="grid grid-cols-1 1024:grid-cols-2 gap-20">
-				<div class="col-span-1 1024:order-2">
-					<div class="image-container aspect-[6/7]">
-						<img class="align-top" src="{{ Image(section_1.image).src }}">
-					</div>
-				</div>
+
 				<div class="col-span-1 text-container">
 					<h2 class="mb-16 font-bold">{{section_1.title}}</h2>
 					{{section_1.text | wpautop}}
@@ -36,9 +32,15 @@
 						</a>
 					</div>
 				</div>
+				<div class="col-span-1">
+					<div class="image-container aspect-[6/7]">
+						<img class="align-top" src="{{ Image(section_1.image).src }}">
+					</div>
+				</div>
+
 			</div>
-			<div class="separator my-36 flex">
-				<div class="mx-auto w-10/12 border border-t-1 border-b-0 border-gray"></div>
+			<div class="separator mt-24 1024:my-36 flex">
+				<div class="mx-auto w-10/12 1024:border border-t-1 border-b-0 border-gray"></div>
 			</div>
 		</div>
 
@@ -67,12 +69,7 @@
 		<div class="w-full bg-darksand py-56">
 			<div class="container">
 				<div class="grid grid-cols-1 1024:grid-cols-2 gap-20">
-					<div class="col-span-1 1024:order-2">
-						<div class="image-container aspect-[6/7]">
-							<img src="{{ Image(section_2.image).src }}">
-						</div>
-					</div>
-					<div class="col-span-1">
+					<div class="col-span-1 text-container">
 						<h2 class="mb-16 font-bold">{{section_2.title}}</h2>
 						{{section_2.text | wpautop}}
 						<div class="my-16">
@@ -84,6 +81,12 @@
 							</a>
 						</div>
 					</div>
+					<div class="col-span-1 text-container">
+						<div class="image-container aspect-[6/7]">
+							<img src="{{ Image(section_2.image).src }}">
+						</div>
+					</div>
+
 				</div>
 			</div>
 		</div>
@@ -93,7 +96,7 @@
 	{% if section_3 %}
 
 		<div class="container text-center pt-52">
-			<h3 class="type-bodoni">
+			<h3 class="type-bodoni text-container">
 				{{section_3.quote}}
 			</h3>
 		</div>

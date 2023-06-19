@@ -9,8 +9,8 @@
 
 
 	{% if hero %}
-		<div id="hero" class="mb-48">
-			<div class="image-container aspect-[16/7]">
+		<div id="hero" class="mb-20 1024:mb-48">
+			<div class="image-container aspect-[4/6] 1024:aspect-[16/7]">
 				<img src="{{Image(hero.image).src}}">
 			</div>
 		</div>
@@ -18,19 +18,20 @@
 
 	{% if section_1 %}
 
-		<div class="container my-36">
+		<div class="container 1024:my-36">
 			<div class="grid grid-cols-1 1024:grid-cols-2 gap-20">
-				<div class="col-span-1 1024:col-span-2 mb-16">
+				<div class="col-span-1 1024:col-span-2 1024:mb-16 text-container">
 					<h1 class="font-bold">{{section_1.title}}</h1>
 					<h5>{{section_1.subtitle}}</h5>
 				</div>
 
-				<div class="col-span-1 1024:order-3">
+				<div class="col-span-1 order-1 1024:order-3">
 					<div class="image-container aspect-[6/7]">
 						<img class="align-top" src="{{ Image(section_1.image).src }}">
 					</div>
 				</div>
-				<div class="col-span-1">
+
+				<div class="col-span-1 text-container">
 					{{section_1.text | wpautop}}
 				</div>
 			</div>
@@ -41,7 +42,7 @@
 	{% if section_2 %}
 		<div class="w-full bg-darksand">
 			<div class="container text-center py-52">
-				<h3 class="type-bodoni">
+				<h3 class="type-bodoni text-container">
 					{{section_2.quote}}
 				</h3>
 			</div>
@@ -49,8 +50,8 @@
 
 	{% endif %}
 
-	<div class="container mt-52">
-		<div class="text-center mb-36">
+	<div class="container mt-16 1024:mt-52">
+		<div class="text-center mb-16 1024:mb-36">
 			<h1 class="uppercase font-bold">Team</h1>
 		</div>
 		{% for member in team %}
@@ -63,10 +64,10 @@
 	{% if section_3 %}
 
 		<div class="container text-center pt-18">
-			<h3 class="mb-12">
+			<h3 class="mb-12 text-container">
 				{{section_3.title}}
 			</h3>
-			<h4>
+			<h4 class="text-container">
 				{{section_3.text}}
 			</h4>
 		</div>

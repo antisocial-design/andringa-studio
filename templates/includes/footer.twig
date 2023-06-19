@@ -1,24 +1,24 @@
 <div class="bg-sand py-8 text-white">
-	<div class="container pt-40">
+	<div class="container pt-20 1024:pt-40">
 		<div class="grid grid-cols-1 1024:grid-cols-2 1024:mb-44">
-			<div class="col-span-1">
-				<h4 class="mb-24 font-bold">{{site.title}}</h4>
+			<div class="col-span-1 text-container">
+				<h4 class="mb-8 1024:mb-24 font-bold">{{site.title}}</h4>
 				<a class="underline" href="{{options.google_maps_url}}" target="_blank">{{options.address | wpautop}}</a>
 			</div>
-			<div class="col-span-1">
-				<h4 class="mb-24 opacity-0">{{site.title}}</h4>
+			<div class="col-span-1 text-container mb-8 1024:mb-0">
+				<h4 class="mb-8 1024:mb-24 opacity-0">{{site.title}}</h4>
 				<span class="underline">{{options.extra_info | wpautop}}</span>
 			</div>
 		</div>
 		<div class="grid grid-cols-1 1024:grid-cols-2 1024:mb-10">
-			<div class="col-span-1">
+			<div class="col-span-1 text-container mb-8 1024:mb-0">
 				<h6>
 					{% for item in footer_menu.get_items %}
 						<a class="footer menu-item mr-8" href="{{ item.link }}">{{item.title}}</a>
 					{% endfor %}
 				</h6>
 			</div>
-			<div class="col-span-1">
+			<div class="col-span-1 text-container">
 				<h6>©
 					{{ now|date('Y') }}
 					Rita Andringa. Design by

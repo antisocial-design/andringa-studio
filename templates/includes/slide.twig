@@ -4,6 +4,6 @@
 	{% set imgURL = Image(item.project.thumbnail).src %}
 {% endif %}
 
-<a href="{{item.project.link}}" class="image-container aspect-[16/7]">
+<a href="{{item.project.link}}" class="image-container aspect-[4/6] 1024:aspect-[16/7]">
 	<img src="{{ imgURL }}" alt="{{item.project.title}}">
 </a>
