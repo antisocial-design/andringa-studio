@@ -28,20 +28,20 @@
 	</div>
 </div>
 
-<div class="mobile-menu z-10 bg-white py-44">
+<div class="mobile-menu z-10 bg-white py-20">
 	<div class="h-full flex">
-		<div class="mobile-menu-wrapper my-auto w-full">
+		<div class="mobile-menu-wrapper mt-auto w-full">
 			<div class="col-span-1">
 				<div class="text-container text-right">
 					{% for item in main_menu.get_items %}
-						<a class="main menu-item hover:font-bold" href="{{ item.link }}">
-							<h4>{{item.title}}</h4>
+						<a class="main menu-item font-bold" href="{{ item.link }}">
+							<h1>{{item.title}}</h1>
 						</a>
 					{% endfor %}
 
 				</div>
 			</div>
-			<div class="grid grid-cols-2 text-container mt-10">
+			<div class="grid grid-cols-2 text-container mt-20">
 				<div class="col-span-1 flex">
 					<div class="lang-selector my-auto">{% include 'includes/language-selector.twig' %}</div>
 				</div>

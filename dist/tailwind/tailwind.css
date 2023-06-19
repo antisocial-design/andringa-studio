@@ -695,10 +695,6 @@ video {
   margin-right: 2rem;
 }
 
-.mt-10 {
-  margin-top: 2.5rem;
-}
-
 .mt-12 {
   margin-top: 3rem;
 }
@@ -729,6 +725,10 @@ video {
 
 .mt-8 {
   margin-top: 2rem;
+}
+
+.mt-auto {
+  margin-top: auto;
 }
 
 .block {
@@ -862,9 +862,9 @@ video {
   padding-bottom: 3rem;
 }
 
-.py-44 {
-  padding-top: 11rem;
-  padding-bottom: 11rem;
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 .py-52 {
@@ -2677,32 +2677,32 @@ html,body{
 }
 
 h1,h1 p{
-  font-size:clamp(1.2rem, calc( .82111rem + 4.98534vw), 8rem);
+  font-size:clamp(6rem, calc( 5.88856rem + 1.46628vw), 8rem);
   line-height:110%
 }
 
 h2,h2 p{
-  font-size:clamp(1.2rem, calc( .87683rem + 4.2522vw), 7rem);
+  font-size:clamp(5rem, calc( 4.88856rem + 1.46628vw), 7rem);
   line-height:110%
 }
 
 h3,h3 p{
-  font-size:clamp(1.2rem, calc( .95484rem + 3.22581vw), 5.6rem);
+  font-size:clamp(4rem, calc( 3.91085rem + 1.17302vw), 5.6rem);
   line-height:120%
 }
 
 h4,h4 p{
-  font-size:clamp(1.2rem, calc( 1.04399rem + 2.05279vw), 4rem);
+  font-size:clamp(3rem, calc( 2.94428rem + .73314vw), 4rem);
   line-height:110%
 }
 
 h5,h5 p{
-  font-size:clamp(1.2rem, calc( 1.11085rem + 1.17302vw), 2.8rem);
+  font-size:clamp(2rem, calc( 1.95543rem + .58651vw), 2.8rem);
   line-height:110%
 }
 
 h6,h6 p{
-  font-size:clamp(1.2rem, calc( 1.15543rem + .58651vw), 2rem);
+  font-size:clamp(1.8rem, calc( 1.78886rem + .14663vw), 2rem);
   line-height:150%
 }
 
@@ -2892,7 +2892,12 @@ article a{
 
 .socials span svg{
   margin:auto;
-  fill:currentcolor
+  fill:currentcolor;
+  transform:scale(1.8)
+}
+
+.overflow-hidden{
+  overflow:hidden
 }
 
 .hover\:font-bold:hover {
