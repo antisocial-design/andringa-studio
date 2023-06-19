@@ -2872,6 +2872,29 @@ article a{
   opacity:1
 }
 
+.socials span{
+  border:2px solid currentcolor;
+  width:36px;
+  height:36px;
+  display:inline-block;
+  border-radius:50%;
+  margin-left:1.5rem;
+  display:inline-flex
+}
+
+@media screen and (min-width: 1024px){
+  .socials span{
+    padding:0.21rem;
+    margin-right:1.5rem;
+    margin-left:0
+  }
+}
+
+.socials span svg{
+  margin:auto;
+  fill:currentcolor
+}
+
 .hover\:font-bold:hover {
   font-weight: 700;
 }

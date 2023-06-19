@@ -247,3 +247,26 @@ article {
   transform: translateX(0%);
   opacity: 1;
 }
+
+.socials {
+  span {
+    border: 2px solid currentcolor;
+    width: 36px;
+    height: 36px;
+    display: inline-block;
+    border-radius: 50%;
+
+    @include min-1024 {
+      padding: 0.21rem;
+      margin-right: 1.5rem;
+      margin-left: 0;
+    }
+    margin-left: 1.5rem;
+    display: inline-flex;
+
+    svg {
+      margin: auto;
+      fill: currentcolor;
+    }
+  }
+}
