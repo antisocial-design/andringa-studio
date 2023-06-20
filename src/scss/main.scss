@@ -59,7 +59,7 @@ h3 p {
 
 h4,
 h4 p {
-  @include fontSizeResponsive(7.6, 2, 144, 4);
+  @include fontSizeResponsive(7.6, 1.8, 144, 4);
   line-height: 110%;
 }
 

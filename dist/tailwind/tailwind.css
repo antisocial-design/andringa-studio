@@ -2692,7 +2692,7 @@ h3,h3 p{
 }
 
 h4,h4 p{
-  font-size:clamp(2rem, calc( 1.88856rem + 1.46628vw), 4rem);
+  font-size:clamp(1.8rem, calc( 1.67742rem + 1.6129vw), 4rem);
   line-height:110%
 }
 
