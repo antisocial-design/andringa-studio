@@ -612,8 +612,12 @@ video {
   }
 }
 
-.relative {
-  position: relative;
+.sticky {
+  position: sticky;
+}
+
+.top-0 {
+  top: 0px;
 }
 
 .z-10 {
@@ -2900,6 +2904,21 @@ article a{
   overflow:hidden
 }
 
+img.nav-brand{
+  width:120px;
+  transition:0.3s ease-in-out
+}
+
+@media screen and (min-width: 1024px){
+  img.nav-brand{
+    width:200px
+  }
+
+  .scrolled img.nav-brand{
+    width:120px
+  }
+}
+
 .hover\:font-bold:hover {
   font-weight: 700;
 }
@@ -2979,6 +2998,10 @@ article a{
     margin-top: 13rem;
   }
 
+  .\31 024\:mb-20 {
+    margin-bottom: 5rem;
+  }
+
   .\31 024\:flex {
     display: flex;
   }
@@ -3022,6 +3045,10 @@ article a{
 
   .\31 024\:border-t {
     border-top-width: 1px;
+  }
+
+  .\31 024\:border-t-0 {
+    border-top-width: 0px;
   }
 
   .\31 024\:pt-32 {

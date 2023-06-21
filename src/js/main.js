@@ -33,6 +33,19 @@ const init = () => {
       });
     });
   }
+
+  jQuery(document).ready(function ($) {
+    $(window).scroll(function () {
+      var scroll = $(window).scrollTop();
+
+      if (scroll >= 500) {
+        $(".header").addClass("scrolled");
+      } else {
+        $(".header").removeClass("scrolled");
+      }
+    });
+  });
+
   jQuery(document).ready(function ($) {
     $(".wp-block-image").attr("data-fancybox", "gallery");
 

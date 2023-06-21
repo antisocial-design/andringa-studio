@@ -275,3 +275,19 @@ article {
 .overflow-hidden {
   overflow: hidden;
 }
+
+img.nav-brand {
+  @include min-1024 {
+    width: 200px;
+  }
+  width: 120px;
+  transition: 0.3s ease-in-out;
+}
+
+.scrolled {
+  img.nav-brand {
+    @include min-1024 {
+      width: 120px;
+    }
+  }
+}
