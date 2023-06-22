@@ -1210,9 +1210,7 @@ template{
 
   font-weight:bold;
 
-  font-style:normal;
-
-  font-display:swap
+  font-style:normal
 }
 
 @font-face{
@@ -1222,9 +1220,7 @@ template{
 
   font-weight:600;
 
-  font-style:normal;
-
-  font-display:swap
+  font-style:normal
 }
 
 @font-face{
@@ -1234,9 +1230,7 @@ template{
 
   font-weight:normal;
 
-  font-style:normal;
-
-  font-display:swap
+  font-style:normal
 }
 
 @font-face{
@@ -1246,9 +1240,7 @@ template{
 
   font-weight:500;
 
-  font-style:normal;
-
-  font-display:swap
+  font-style:normal
 }
 
 @font-face{
@@ -1258,9 +1250,7 @@ template{
 
   font-weight:bold;
 
-  font-style:normal;
-
-  font-display:swap
+  font-style:normal
 }
 
 @font-face{
@@ -1270,9 +1260,7 @@ template{
 
   font-weight:normal;
 
-  font-style:normal;
-
-  font-display:swap
+  font-style:normal
 }
 
 @font-face{
@@ -1282,9 +1270,7 @@ template{
 
   font-weight:normal;
 
-  font-style:italic;
-
-  font-display:swap
+  font-style:italic
 }
 
 @font-face{
@@ -1294,9 +1280,7 @@ template{
 
   font-weight:bold;
 
-  font-style:normal;
-
-  font-display:swap
+  font-style:normal
 }
 
 :root{
