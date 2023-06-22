@@ -739,6 +739,10 @@ video {
   display: block;
 }
 
+.inline-block {
+  display: inline-block;
+}
+
 .flex {
   display: flex;
 }
@@ -943,11 +947,6 @@ video {
 
 .opacity-0 {
   opacity: 0;
-}
-
-.grayscale {
-  --tw-grayscale: grayscale(100%);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -2919,6 +2918,10 @@ img.nav-brand{
   }
 }
 
+.filter-btn{
+  cursor:pointer
+}
+
 .hover\:font-bold:hover {
   font-weight: 700;
 }
@@ -2966,6 +2969,10 @@ img.nav-brand{
     margin-bottom: 4rem;
   }
 
+  .\31 024\:mb-20 {
+    margin-bottom: 5rem;
+  }
+
   .\31 024\:mb-24 {
     margin-bottom: 6rem;
   }
@@ -2982,10 +2989,6 @@ img.nav-brand{
     margin-bottom: 10rem;
   }
 
-  .\31 024\:mb-44 {
-    margin-bottom: 11rem;
-  }
-
   .\31 024\:mb-48 {
     margin-bottom: 12rem;
   }
@@ -2996,10 +2999,6 @@ img.nav-brand{
 
   .\31 024\:mt-52 {
     margin-top: 13rem;
-  }
-
-  .\31 024\:mb-20 {
-    margin-bottom: 5rem;
   }
 
   .\31 024\:flex {
