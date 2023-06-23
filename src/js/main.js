@@ -50,10 +50,8 @@ const init = () => {
     $(".wp-block-image").attr("data-fancybox", "gallery");
 
     $(".wp-block-image").each(function () {
-      var imgSrc = $(this).find("img").attr("srcset");
-      const url = imgSrc.split(/[\s,]+/);
-      const output = url[url.length - 2];
-      $(this).attr("href", output);
+      var imgSrc = $(this).find("img").attr("src");
+      $(this).attr("href", imgSrc);
     });
 
     Fancybox.bind('[data-fancybox="gallery"]', {
