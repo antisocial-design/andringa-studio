@@ -12,6 +12,8 @@ $args = array(
     'posts_per_page' => -1,
     'post_count' => -1,
     'post_status' => 'publish',
+    'orderby' => 'menu_order',
+    'order' => 'ASC',
   );
 
 $context['press'] = Timber::get_posts( $args );

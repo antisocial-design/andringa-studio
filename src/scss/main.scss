@@ -290,6 +290,13 @@ img.nav-brand {
       width: 120px;
     }
   }
+  a h6 {
+    @include fontSizeResponsive(7.6, 1.5, 144, 1);
+  }
+}
+
+a h6 {
+  transition: 0.3s ease-in-out;
 }
 
 .filter-btn {

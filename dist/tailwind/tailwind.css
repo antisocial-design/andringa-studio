@@ -2902,6 +2902,14 @@ img.nav-brand{
   }
 }
 
+.scrolled a h6{
+  font-size:clamp(1.5rem, calc( 1.52786rem + -.36657vw), 1rem)
+}
+
+a h6{
+  transition:0.3s ease-in-out
+}
+
 .filter-btn{
   cursor:pointer
 }

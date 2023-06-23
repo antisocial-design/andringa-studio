@@ -1,5 +1,4 @@
 <?php
-
 add_action( 'acf/include_fields', function() {
 	if ( ! function_exists( 'acf_add_local_field_group' ) ) {
 		return;
@@ -471,13 +470,13 @@ add_action( 'acf/include_fields', function() {
 				array(
 					'param' => 'options_page',
 					'operator' => '==',
-					'value' => 'acf-options-footer',
+					'value' => 'theme-general-settings',
 				),
 			),
 		),
 		'menu_order' => 0,
 		'position' => 'normal',
-		'style' => 'default',
+		'style' => 'seamless',
 		'label_placement' => 'top',
 		'instruction_placement' => 'label',
 		'hide_on_screen' => '',
@@ -1334,7 +1333,6 @@ add_action( 'acf/include_fields', function() {
 		'show_in_rest' => 0,
 	) );
 } );
-
 
 
 ?>
