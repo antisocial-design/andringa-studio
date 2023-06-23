@@ -2709,6 +2709,16 @@ p{
   }
 }
 
+.portfolio_content .wp-block-gallery{
+  margin-bottom:6rem
+}
+
+@media screen and (min-width: 1024px){
+  .portfolio_content .wp-block-gallery{
+    margin-bottom:4rem
+  }
+}
+
 .wp-block-image img{
   min-width:100%;
   height:auto

@@ -92,6 +92,12 @@ p {
       margin-bottom: 6rem;
     }
   }
+  .wp-block-gallery {
+    @include min-1024 {
+      margin-bottom: 4rem;
+    }
+    margin-bottom: 6rem;
+  }
 }
 
 .wp-block-image {
