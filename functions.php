@@ -27,7 +27,7 @@ function load_theme_scripts_and_styles() {
 add_action('wp_enqueue_scripts', 'load_theme_scripts_and_styles');
 
 include 'includes/acfs.php';
-include 'includes/cpts.php';
+// include 'includes/cpts.php';
 include 'includes/taxonomies.php';
 include 'includes/remove.php';
 include 'includes/custom-styles.php';
