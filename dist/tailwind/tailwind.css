@@ -2707,20 +2707,6 @@ p{
   .portfolio_content .wp-block-image{
     margin-bottom:6rem
   }
-
-  .portfolio_content .wp-block-gallery,.portfolio_content .wp-block-columns{
-    gap:6rem !important
-  }
-}
-
-@media screen and (max-width: 1024px){
-  .portfolio_content .wp-block-columns{
-    margin-bottom:0px !important
-  }
-
-  .portfolio_content p{
-    padding:0rem 3rem
-  }
 }
 
 #hero .slick-list{

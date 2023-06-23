@@ -92,20 +92,6 @@ p {
       margin-bottom: 6rem;
     }
   }
-  .wp-block-gallery,
-  .wp-block-columns {
-    @include min-1024 {
-      gap: 6rem !important;
-    }
-  }
-  @include max-1024 {
-    .wp-block-columns {
-      margin-bottom: 0px !important;
-    }
-    p {
-      padding: 0rem 3rem;
-    }
-  }
 }
 
 #hero {
