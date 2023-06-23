@@ -94,6 +94,13 @@ p {
   }
 }
 
+.wp-block-image {
+  img {
+    min-width: 100%;
+    height: auto;
+  }
+}
+
 #hero {
   .slick-list {
     height: 100%;
