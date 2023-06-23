@@ -2915,6 +2915,21 @@ a h6{
   cursor:pointer
 }
 
+.wp-block-gallery.wp-block-gallery-4,.wp-block-gallery.wp-block-gallery-6,.wp-block-gallery.wp-block-gallery-8{
+  --wp--style--gallery-gap-default: 4rem;
+  --gallery-block--gutter-size: 4rem;
+  --wp--style--block-gap: 4rem;
+  gap:var(--wp--style--gallery-gap-default, var(--gallery-block--gutter-size, var(--wp--style--block-gap, 0.5em)))
+}
+
+@media screen and (min-width: 1024px){
+  .wp-block-gallery.wp-block-gallery-4,.wp-block-gallery.wp-block-gallery-6,.wp-block-gallery.wp-block-gallery-8{
+    --wp--style--gallery-gap-default: 6rem;
+    --gallery-block--gutter-size: 6rem;
+    --wp--style--block-gap: 6rem
+  }
+}
+
 .hover\:font-bold:hover {
   font-weight: 700;
 }

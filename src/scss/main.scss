@@ -301,3 +301,20 @@ a h6 {
 .filter-btn {
   cursor: pointer;
 }
+
+.wp-block-gallery.wp-block-gallery-4,
+.wp-block-gallery.wp-block-gallery-6,
+.wp-block-gallery.wp-block-gallery-8 {
+  @include min-1024 {
+    --wp--style--gallery-gap-default: 6rem;
+    --gallery-block--gutter-size: 6rem;
+    --wp--style--block-gap: 6rem;
+  }
+  --wp--style--gallery-gap-default: 4rem;
+  --gallery-block--gutter-size: 4rem;
+  --wp--style--block-gap: 4rem;
+  gap: var(
+    --wp--style--gallery-gap-default,
+    var(--gallery-block--gutter-size, var(--wp--style--block-gap, 0.5em))
+  );
+}
