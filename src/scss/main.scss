@@ -29,6 +29,25 @@ body {
     padding-left: 9rem;
     padding-right: 9rem;
   }
+  .portfolio_content {
+    @include max-1024 {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+    .wp-block-image img {
+      margin-bottom: 2rem;
+    }
+    .wp-block-image {
+      @include max-1024 {
+        min-width: 100%;
+      }
+    }
+    .wp-block-columns {
+      @include max-1024 {
+        margin-bottom: 0px;
+      }
+    }
+  }
 }
 
 .text-container {
@@ -271,6 +290,19 @@ article {
   }
 }
 
+.footer {
+  .socials {
+    span {
+      @include min-1024 {
+        margin-right: 0;
+        margin-left: 1.5rem;
+      }
+      margin-left: 0rem;
+      margin-right: 1.5rem;
+    }
+  }
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -310,9 +342,9 @@ a h6 {
     --gallery-block--gutter-size: 6rem;
     --wp--style--block-gap: 6rem;
   }
-  --wp--style--gallery-gap-default: 4rem;
-  --gallery-block--gutter-size: 4rem;
-  --wp--style--block-gap: 4rem;
+  --wp--style--gallery-gap-default: 0rem;
+  --gallery-block--gutter-size: 0rem;
+  --wp--style--block-gap: 0rem;
   gap: var(
     --wp--style--gallery-gap-default,
     var(--gallery-block--gutter-size, var(--wp--style--block-gap, 0.5em))

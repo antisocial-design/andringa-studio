@@ -2658,6 +2658,25 @@ html,body{
 }
 
 @media screen and (max-width: 1024px){
+  .container .portfolio_content{
+    padding-left:3rem;
+    padding-right:3rem
+  }
+}
+
+.container .portfolio_content .wp-block-image img{
+  margin-bottom:2rem
+}
+
+@media screen and (max-width: 1024px){
+  .container .portfolio_content .wp-block-image{
+    min-width:100%
+  }
+
+  .container .portfolio_content .wp-block-columns{
+    margin-bottom:0px
+  }
+
   .text-container{
     padding:0rem 3rem
   }
@@ -2884,6 +2903,18 @@ article a{
   transform:scale(1.8)
 }
 
+.footer .socials span{
+  margin-left:0rem;
+  margin-right:1.5rem
+}
+
+@media screen and (min-width: 1024px){
+  .footer .socials span{
+    margin-right:0;
+    margin-left:1.5rem
+  }
+}
+
 .overflow-hidden{
   overflow:hidden
 }
@@ -2916,9 +2947,9 @@ a h6{
 }
 
 .wp-block-gallery.wp-block-gallery-4,.wp-block-gallery.wp-block-gallery-6,.wp-block-gallery.wp-block-gallery-8{
-  --wp--style--gallery-gap-default: 4rem;
-  --gallery-block--gutter-size: 4rem;
-  --wp--style--block-gap: 4rem;
+  --wp--style--gallery-gap-default: 0rem;
+  --gallery-block--gutter-size: 0rem;
+  --wp--style--block-gap: 0rem;
   gap:var(--wp--style--gallery-gap-default, var(--gallery-block--gutter-size, var(--wp--style--block-gap, 0.5em)))
 }
 
