@@ -654,6 +654,11 @@ video {
   margin-bottom: 4rem;
 }
 
+.my-20 {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
 .my-auto {
   margin-top: auto;
   margin-bottom: auto;
