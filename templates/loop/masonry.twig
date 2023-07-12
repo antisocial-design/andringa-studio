@@ -4,7 +4,9 @@
 	{% set imgURL = Image(project.thumbnail).src %}
 {% endif %}
 
-<a class="col-span-1 inline-block portfolio_thumbnail image-container aspect-[9/14]" href="{{project.link}}" data-cat="{{project.project_category}}">
+
+<a class="col-span-1 inline-block portfolio_thumbnail image-container aspect-[9/14]" href="{{project.link}}" data-cat="{% for category in project.meta('project_category') %}{{category.ID}}{{ not loop.last ? ',' }}{% endfor %}">
+
 
 	<img src="{{ imgURL }}">
 	<div class="post_meta p-15 text-center">

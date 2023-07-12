@@ -508,7 +508,7 @@ add_action( 'acf/include_fields', function() {
 				'save_terms' => 1,
 				'load_terms' => 1,
 				'return_format' => 'object',
-				'field_type' => 'select',
+				'field_type' => 'multi_select',
 				'allow_null' => 0,
 				'multiple' => 0,
 			),
@@ -1333,6 +1333,8 @@ add_action( 'acf/include_fields', function() {
 		'show_in_rest' => 0,
 	) );
 } );
+
+
 
 
 ?>

@@ -21,12 +21,18 @@ const init = () => {
         } else {
           $("#post-list .portfolio_thumbnail")
             .filter(function () {
-              return $(this).data("cat") === category;
+              var categories = $(this).attr("data-cat").split(","); // Split the data-cat attribute values into an array of categories
+              return categories.some(function (cat) {
+                return cat.trim().includes(category); // Check if the category is contained within the current category value
+              });
             })
             .show();
           $("#post-list .portfolio_thumbnail")
             .filter(function () {
-              return $(this).data("cat") !== category;
+              var categories = $(this).attr("data-cat").split(","); // Split the data-cat attribute values into an array of categories
+              return !categories.some(function (cat) {
+                return cat.trim().includes(category); // Check if the category is not contained within any of the category values
+              });
             })
             .hide();
         }
