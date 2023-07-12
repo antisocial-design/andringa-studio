@@ -899,6 +899,11 @@ video {
   padding-bottom: 2rem;
 }
 
+.py-36 {
+  padding-top: 9rem;
+  padding-bottom: 9rem;
+}
+
 .pt-18 {
   padding-top: 4.5rem;
 }
@@ -3049,6 +3054,10 @@ a h6{
     margin-top: 13rem;
   }
 
+  .\31 024\:mt-36 {
+    margin-top: 9rem;
+  }
+
   .\31 024\:flex {
     display: flex;
   }
@@ -3108,5 +3117,9 @@ a h6{
 
   .\31 024\:pt-40 {
     padding-top: 10rem;
+  }
+
+  .\31 024\:pt-36 {
+    padding-top: 9rem;
   }
 }

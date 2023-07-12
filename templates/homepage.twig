@@ -17,37 +17,36 @@
 
 	{% if section_1 %}
 
-		<div class="container mt-36">
-			<div class="grid grid-cols-1 1024:grid-cols-2 gap-20">
+		<div class="w-full bg-darksand py-36">
+			<div class="container">
+				<div class="grid grid-cols-1 1024:grid-cols-2 gap-20">
 
-				<div class="col-span-1 text-container">
-					<h2 class="mb-16 font-bold">{{section_1.title}}</h2>
-					{{section_1.text | wpautop}}
-					<div class="my-16">
-						<a href="{{section_1.link.link}}" class="rounded-icon bg-sand text-white">
-							<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="1" stroke-linecap="square" stroke-linejoin="arcs">
-								<line x1="12" y1="5" x2="12" y2="19"></line>
-								<line x1="5" y1="12" x2="19" y2="12"></line>
-							</svg>
-						</a>
+					<div class="col-span-1 text-container">
+						<h2 class="mb-16 font-bold">{{section_1.title}}</h2>
+						{{section_1.text | wpautop}}
+						{# <div class="my-16">
+																			<a href="{{section_1.link.link}}" class="rounded-icon bg-sand text-white">
+																				<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="1" stroke-linecap="square" stroke-linejoin="arcs">
+																					<line x1="12" y1="5" x2="12" y2="19"></line>
+																					<line x1="5" y1="12" x2="19" y2="12"></line>
+																				</svg>
+																			</a>
+																		</div> #}
 					</div>
-				</div>
-				<div class="col-span-1">
-					<div class="image-container aspect-[6/7]">
-						<img class="align-top" src="{{ Image(section_1.image).src }}">
+					<div class="col-span-1">
+						<div class="image-container aspect-[6/7]">
+							<img class="align-top" src="{{ Image(section_1.image).src }}">
+						</div>
 					</div>
-				</div>
 
-			</div>
-			<div class="separator mt-24 1024:my-36 flex">
-				<div class="mx-auto w-10/12 1024:border border-t-1 border-b-0 border-gray"></div>
+				</div>
 			</div>
 		</div>
 
 	{% endif %}
 
 	{% if portfolio %}
-		<div class="container">
+		<div class="container pt-20 1024:pt-36">
 			<div class="text-center mb-20">
 				<h2 class="font-bold">Portfolio</h2>
 			</div>
