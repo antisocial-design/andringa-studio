@@ -2,13 +2,13 @@
 
 {% block content %}
 	{# 	
-				<div id="hero" class="mb-20 1024:mb-48">
-			
-					<div class="image-container aspect-[4/6] 1024:aspect-[16/7]">
-						<img src="{{Image(post.image).src}}" alt="{{item.project.title}}">
-					</div>
-			
-				</div> #}
+						<div id="hero" class="mb-20 1024:mb-48">
+					
+							<div class="image-container aspect-[4/6] 1024:aspect-[16/7]">
+								<img src="{{Image(post.image).src}}" alt="{{item.project.title}}">
+							</div>
+					
+						</div> #}
 
 	<div class="container my-28">
 
@@ -21,7 +21,7 @@
 			{% endfor %}
 		</div>
 
-		<div class="columns-1 1024:columns-3 1024:gap-16 text-container" id="post-list">
+		<div class="grid grid-cols-1 1024:grid-cols-3 gap-8 1024:gap-16 text-container" id="post-list">
 			{% for project in portfolio %}
 				{% include 'loop/masonry.twig' %}
 			{% endfor %}

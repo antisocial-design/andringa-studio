@@ -51,7 +51,7 @@
 			<div class="text-center mb-20">
 				<h2 class="font-bold">Portfolio</h2>
 			</div>
-			<div class="columns-1 1024:columns-3 1024:gap-16" id="post-list">
+			<div class="grid grid-cols-1 1024:grid-cols-3 gap-8 1024:gap-16" id="post-list">
 				{% for project in portfolio.works %}
 					{% include 'loop/masonry.twig' %}
 				{% endfor %}

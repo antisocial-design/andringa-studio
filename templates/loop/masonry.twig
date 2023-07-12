@@ -4,7 +4,8 @@
 	{% set imgURL = Image(project.thumbnail).src %}
 {% endif %}
 
-<a class="col-span-1 inline-block mb-8 1024:mb-16 portfolio_thumbnail" href="{{project.link}}" data-cat="{{project.project_category}}">
+<a class="col-span-1 inline-block portfolio_thumbnail image-container aspect-[9/14]" href="{{project.link}}" data-cat="{{project.project_category}}">
+
 	<img src="{{ imgURL }}">
 	<div class="post_meta p-15 text-center">
 		<h5>{{project.title}}</h4>
