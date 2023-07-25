@@ -644,11 +644,6 @@ video {
   margin: auto;
 }
 
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .my-16 {
   margin-top: 4rem;
   margin-bottom: 4rem;
@@ -720,14 +715,6 @@ video {
   margin-top: 5rem;
 }
 
-.mt-24 {
-  margin-top: 6rem;
-}
-
-.mt-36 {
-  margin-top: 9rem;
-}
-
 .mt-4 {
   margin-top: 1rem;
 }
@@ -738,6 +725,14 @@ video {
 
 .mt-auto {
   margin-top: auto;
+}
+
+.mt-\[8rem\] {
+  margin-top: 8rem;
+}
+
+.mb-\[4rem\] {
+  margin-bottom: 4rem;
 }
 
 .block {
@@ -784,17 +779,8 @@ video {
   height: 100%;
 }
 
-.w-10\/12 {
-  width: 83.333333%;
-}
-
 .w-full {
   width: 100%;
-}
-
-.columns-1 {
-  -moz-columns: 1;
-       columns: 1;
 }
 
 .grid-cols-1 {
@@ -833,10 +819,6 @@ video {
   border-width: 1px;
 }
 
-.border-b-0 {
-  border-bottom-width: 0px;
-}
-
 .border-r {
   border-right-width: 1px;
 }
@@ -848,11 +830,6 @@ video {
 .border-dark {
   --tw-border-opacity: 1;
   border-color: rgb(142 142 140 / var(--tw-border-opacity));
-}
-
-.border-gray {
-  --tw-border-opacity: 1;
-  border-color: rgb(217 217 217 / var(--tw-border-opacity));
 }
 
 .bg-darksand {
@@ -884,6 +861,11 @@ video {
   padding-bottom: 5rem;
 }
 
+.py-36 {
+  padding-top: 9rem;
+  padding-bottom: 9rem;
+}
+
 .py-52 {
   padding-top: 13rem;
   padding-bottom: 13rem;
@@ -897,11 +879,6 @@ video {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-
-.py-36 {
-  padding-top: 9rem;
-  padding-bottom: 9rem;
 }
 
 .pt-18 {
@@ -918,6 +895,10 @@ video {
 
 .pt-52 {
   padding-top: 13rem;
+}
+
+.pt-36 {
+  padding-top: 9rem;
 }
 
 .text-center {
@@ -3054,8 +3035,16 @@ a h6{
     margin-top: 13rem;
   }
 
-  .\31 024\:mt-36 {
-    margin-top: 9rem;
+  .\31 024\:mt-\[10rem\] {
+    margin-top: 10rem;
+  }
+
+  .\31 024\:mb-\[9rem\] {
+    margin-bottom: 9rem;
+  }
+
+  .\31 024\:mb-\[6rem\] {
+    margin-bottom: 6rem;
   }
 
   .\31 024\:flex {
@@ -3068,11 +3057,6 @@ a h6{
 
   .\31 024\:aspect-\[16\/7\] {
     aspect-ratio: 16/7;
-  }
-
-  .\31 024\:columns-3 {
-    -moz-columns: 3;
-         columns: 3;
   }
 
   .\31 024\:grid-cols-2 {
@@ -3095,10 +3079,6 @@ a h6{
     gap: 4rem;
   }
 
-  .\31 024\:border {
-    border-width: 1px;
-  }
-
   .\31 024\:border-r {
     border-right-width: 1px;
   }
@@ -3113,10 +3093,6 @@ a h6{
 
   .\31 024\:pt-32 {
     padding-top: 8rem;
-  }
-
-  .\31 024\:pt-40 {
-    padding-top: 10rem;
   }
 
   .\31 024\:pt-36 {

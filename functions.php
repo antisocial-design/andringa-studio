@@ -62,6 +62,7 @@ if( function_exists('acf_add_options_page') ) {
 
 
   pll_register_string('andringa-studio', 'Ver Todos');
+  pll_register_string('andringa-studio', 'Contacts');
 
 
 
