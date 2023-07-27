@@ -350,3 +350,9 @@ a h6 {
     var(--gallery-block--gutter-size, var(--wp--style--block-gap, 0.5em))
   );
 }
+
+.contacts {
+  h5 p {
+    line-height: 170%;
+  }
+}

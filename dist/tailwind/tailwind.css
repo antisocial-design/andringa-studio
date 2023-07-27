@@ -691,6 +691,10 @@ video {
   margin-bottom: 2rem;
 }
 
+.mb-\[4rem\] {
+  margin-bottom: 4rem;
+}
+
 .ml-auto {
   margin-left: auto;
 }
@@ -723,16 +727,12 @@ video {
   margin-top: 2rem;
 }
 
-.mt-auto {
-  margin-top: auto;
-}
-
 .mt-\[8rem\] {
   margin-top: 8rem;
 }
 
-.mb-\[4rem\] {
-  margin-bottom: 4rem;
+.mt-auto {
+  margin-top: auto;
 }
 
 .block {
@@ -893,12 +893,12 @@ video {
   padding-top: 8rem;
 }
 
-.pt-52 {
-  padding-top: 13rem;
-}
-
 .pt-36 {
   padding-top: 9rem;
+}
+
+.pt-52 {
+  padding-top: 13rem;
 }
 
 .text-center {
@@ -919,6 +919,10 @@ video {
 
 .uppercase {
   text-transform: uppercase;
+}
+
+.leading-8 {
+  line-height: 2rem;
 }
 
 .text-dark {
@@ -2956,6 +2960,10 @@ a h6{
   }
 }
 
+.contacts h5 p{
+  line-height:170%
+}
+
 .hover\:font-bold:hover {
   font-weight: 700;
 }
@@ -3031,20 +3039,20 @@ a h6{
     margin-bottom: 13rem;
   }
 
-  .\31 024\:mt-52 {
-    margin-top: 13rem;
-  }
-
-  .\31 024\:mt-\[10rem\] {
-    margin-top: 10rem;
+  .\31 024\:mb-\[6rem\] {
+    margin-bottom: 6rem;
   }
 
   .\31 024\:mb-\[9rem\] {
     margin-bottom: 9rem;
   }
 
-  .\31 024\:mb-\[6rem\] {
-    margin-bottom: 6rem;
+  .\31 024\:mt-52 {
+    margin-top: 13rem;
+  }
+
+  .\31 024\:mt-\[10rem\] {
+    margin-top: 10rem;
   }
 
   .\31 024\:flex {

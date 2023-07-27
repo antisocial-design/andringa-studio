@@ -3,13 +3,13 @@
 {% block content %}
 
 	<div class="w-full pt-36">
-		<div class="container">
+		<div class="container {{page}}">
 			<div class="grid grid-cols-1 1024:grid-cols-2 gap-20">
 
 				<div class="col-span-1 text-container mb-12">
-					<h2 class="font-bold 1024:mb-[9rem] mb[7rem]">{{ fn('pll__', 'Contactos') }}</h2>
+					<h2 class="font-bold 1024:mb-[9rem] mb[7rem]">{{post.title}}</h2>
 					<h5 class="font-bold mb-4">{{site.title}}</h5>
-					<h5 class="1024:mb-[6rem] mb-[4rem]">{{options.address | wpautop}}</h5>
+					<h5 class="1024:mb-[6rem] mb-[4rem] leading-8">{{options.address | wpautop}}</h5>
 					<h5>
 						{{post.contact_details | wpautop}}
 					</h5>
