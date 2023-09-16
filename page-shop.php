@@ -1,5 +1,5 @@
 <?php
-// Template name: Post Page
+// Template name: Shop Page
 
 defined('ABSPATH') || exit;
 
