@@ -8,4 +8,4 @@ $context['post'] = new Timber\Post();
 
 $current = get_the_ID();
 
-Timber::render('single.twig', $context);
+Timber::render('single-portfolio.twig', $context);

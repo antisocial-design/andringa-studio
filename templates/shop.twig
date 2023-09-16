@@ -1,0 +1,25 @@
+{% extends "general.twig" %}
+
+{% block content %}
+
+	<div class="container my-28">
+
+		<div class="filter_wraper mb-28 text-center 1024:flex justify-center gap-14 w-full">
+			{% for tax in category %}
+				<span class="filter-btn" data-cat="{{tax.ID}}">
+					<h6 class="hover:font-bold mb-8 1024:mb-0">{{tax.name}}</h6>
+
+				</span>
+			{% endfor %}
+		</div>
+
+
+		<div class="grid grid-cols-1 1024:grid-cols-3 gap-8 1024:gap-16 text-container">
+			{% for product in products %}
+				{% include 'loop/product.twig' %}
+			{% endfor %}
+		</div>
+
+	</div>
+
+{% endblock %}

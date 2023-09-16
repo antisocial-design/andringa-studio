@@ -8,6 +8,11 @@ function register_menus(){
     register_nav_menu('policy-menu', 'Policy Menu');
 }
 
+function theme_add_woocommerce_support() {
+    add_theme_support( 'woocommerce' );
+}
+add_action( 'after_setup_theme', 'theme_add_woocommerce_support' );
+
 // show_admin_bar(false);
 add_post_type_support('page', 'excerpt', 'post-thumbnails');
 add_theme_support( 'post-thumbnails' );
@@ -63,7 +68,5 @@ if( function_exists('acf_add_options_page') ) {
 
   pll_register_string('andringa-studio', 'Ver Todos');
   pll_register_string('andringa-studio', 'Contacts');
-
-
 
 ?>

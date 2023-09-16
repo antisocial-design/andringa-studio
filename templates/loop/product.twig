@@ -1,0 +1,13 @@
+<div class="product-wrapper col-span-1">
+	<a href="{{product.link}}" class="block aspect-square relative">
+		<img class="absolute w-full h-full object-cover object-center" src="{{Image(product.thumbnail).src}}">
+	</a>
+
+	<a href="{{product.link}}" class="flex mt-4 place-content-between">
+		<h6>{{product.title}}</h6>
+		<h6>€
+			{{product._regular_price}}</h6>
+
+	</a>
+
+</div>

@@ -1,0 +1,66 @@
+{% extends "general.twig" %}
+{% block content %}
+
+	<div class="container py-24">
+		<div class="grid grid-cols-1 1024:grid-cols-2 gap-8">
+			<div class="col-span-1 gallery-wrapper">
+				<div id="hero" class="slider">
+
+
+					{% for image in product.get_gallery_image_ids %}
+						<img class="aspect-square object-cover" src="{{ Image(product.image_id).src('large') }}" alt="{{item.project.title}}">
+						{% include 'includes/product-slide.twig' %}
+					{% endfor %}
+
+
+				</div>
+
+			</div>
+			<div class="col-span-1 product-info-sidebar">
+				<div id="sidebar" class="sidebar">
+					<div class="d-flex flex-column justify-content-between product-info" data-variable-price="{{ variable_price_range }}">
+						{% do action('woocommerce_before_single_product') %}
+						{% do action('woocommerce_single_product_summary') %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container bg-[#F2F2F2] py-24 mb-24">
+		<div class="grid grid-cols-1 1024:grid-cols-2 gap-8">
+
+			<div class="col-span-1"><img src="{{ Image(product.image_id).src('large') }}" alt="{{item.project.title}}"></div>
+
+			<div class="col-span-1 py-8">
+				<h5 class="mb-10 font-bold">Descrição:</h5>
+				<h6 class="mb-18">
+					{{product.description | wpautop}}
+				</h6>
+				<h5 class="mb-10 font-bold">Dimensões:</h5>
+				<h6>
+					{{product.length }}
+					cm
+															de profundidade
+					<br>
+
+					{{product.width }}
+					cm
+															de largura
+					<br>
+					{{product.height }}
+					cm
+															de cumprimento
+
+				</h6>
+
+			</div>
+
+		</div>
+	</div>
+
+
+	{# <pre> {{product | print_r}}</pre> #}
+
+
+{% endblock %}
