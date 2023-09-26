@@ -69,7 +69,7 @@ const init = () => {
       $(".hamburger").click(function () {
         $(this).toggleClass("is-active");
         $(".mobile-menu").toggleClass("active");
-        $("body,html").toggleClass("overflow-hidden");
+        // $("body,html").toggleClass("overflow-hidden");
       });
     });
   });
