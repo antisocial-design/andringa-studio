@@ -51,6 +51,36 @@ const init = () => {
     });
   }
 
+  if (document.querySelector(".product-filter-btn")) {
+    jQuery(document).ready(function ($) {
+      $(".product-filter-btn").click(function () {
+        $(".product-filter-btn").removeClass("font-bold");
+        $(this).addClass("font-bold");
+        var category = $(this).data("cat");
+        if (category === "all") {
+          $("#product-list .product-wrapper").show();
+        } else {
+          $("#product-list .product-wrapper")
+            .filter(function () {
+              var categories = $(this).attr("data-cat").split(","); // Split the data-cat attribute values into an array of categories
+              return categories.some(function (cat) {
+                return cat.trim().includes(category); // Check if the category is contained within the current category value
+              });
+            })
+            .show();
+          $("#product-list .product-wrapper")
+            .filter(function () {
+              var categories = $(this).attr("data-cat").split(","); // Split the data-cat attribute values into an array of categories
+              return !categories.some(function (cat) {
+                return cat.trim().includes(category); // Check if the category is not contained within any of the category values
+              });
+            })
+            .hide();
+        }
+      });
+    });
+  }
+
   jQuery(document).ready(function ($) {
     $(window).scroll(function () {
       var scroll = $(window).scrollTop();
