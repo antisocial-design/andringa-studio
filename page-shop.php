@@ -20,7 +20,11 @@ $args = array(
 $context['products'] = Timber::get_posts( $args );
 
 $taxonomy = 'product_cat';
-$context['category'] = Timber::get_terms($taxonomy);
+$context['category'] = Timber::get_terms([
+    'taxonomy' => $taxonomy,
+    'hide_empty' => true,
+]);
+
 
 
 Timber::render('shop.twig', $context);
