@@ -20,7 +20,9 @@
 				<div id="sidebar" class="sidebar">
 					<div class="d-flex flex-column justify-content-between product-info" data-variable-price="{{ variable_price_range }}">
 						{% do action('woocommerce_before_single_product') %}
+
 						{% do action('woocommerce_single_product_summary') %}
+
 					</div>
 				</div>
 			</div>
@@ -33,25 +35,8 @@
 			<div class="col-span-1"><img src="{{ Image(product.image_id).src('large') }}" alt="{{item.project.title}}"></div>
 
 			<div class="col-span-1 py-8">
-				<h5 class="mb-10 font-bold">Descrição:</h5>
 				<h6 class="mb-18">
 					{{product.description | wpautop}}
-				</h6>
-				<h5 class="mb-10 font-bold">Dimensões:</h5>
-				<h6>
-					{{product.length }}
-					cm
-															de profundidade
-					<br>
-
-					{{product.width }}
-					cm
-															de largura
-					<br>
-					{{product.height }}
-					cm
-															de cumprimento
-
 				</h6>
 
 			</div>
