@@ -10,6 +10,17 @@ const init = () => {
       speed: 1000,
     });
   }
+  if (document.querySelector("#hero.product-slider")) {
+    jQuery("#hero.product-slider").slick({
+      infinite: true,
+      arrows: true,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      fade: true,
+      cssEase: "ease",
+      speed: 1000,
+    });
+  }
   if (document.querySelector(".filter-btn")) {
     jQuery(document).ready(function ($) {
       $(".filter-btn").click(function () {

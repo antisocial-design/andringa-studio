@@ -4,9 +4,7 @@
 	<div class="container py-24">
 		<div class="grid grid-cols-1 1024:grid-cols-2 gap-8">
 			<div class="col-span-1 gallery-wrapper">
-				<div id="hero" class="slider">
-
-
+				<div id="hero" class="product-slider">
 					{% for image in product.get_gallery_image_ids %}
 						<img class="aspect-square object-cover" src="{{ Image(product.image_id).src('large') }}" alt="{{item.project.title}}">
 						{% include 'includes/product-slide.twig' %}
