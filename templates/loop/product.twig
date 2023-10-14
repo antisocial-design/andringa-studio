@@ -1,4 +1,5 @@
-<div class="product-wrapper col-span-1" data-cat="{% for category in project.meta('product_cat') %}{{category.ID}}{{ not loop.last ? ',' }}{% endfor %}">
+<div class="product-wrapper col-span-1" data-cat="{% for category in product.get_terms('product_cat') %}{{category.ID}}{{ not loop.last ? ',' }}{% endfor %}">
+
 
 	<a href="{{product.link}}" class="block aspect-square relative">
 		<img class="absolute w-full h-full object-cover object-center" src="{{Image(product.thumbnail).src}}">
