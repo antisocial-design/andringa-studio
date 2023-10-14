@@ -70,11 +70,13 @@ if( function_exists('acf_add_options_page') ) {
   pll_register_string('andringa-studio', 'Ver Todos');
   pll_register_string('andringa-studio', 'Contacts');
 
-add_filter('add_to_cart_redirect', 'lw_add_to_cart_redirect');
-function lw_add_to_cart_redirect() {
- global $woocommerce;
- $lw_redirect_checkout = $woocommerce->cart->get_checkout_url();
- return $lw_redirect_checkout;
+add_action('template_redirect', 'custom_cart_redirect');
+function custom_cart_redirect() {
+    if (is_cart() && !is_wc_endpoint_url('order-received')) {
+        wp_safe_redirect(wc_get_checkout_url());
+        exit;
+    }
 }
+
 
 ?>
