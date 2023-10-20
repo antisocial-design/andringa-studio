@@ -484,6 +484,23 @@ add_action( 'acf/include_fields', function() {
 				'default_value' => '',
 				'placeholder' => '',
 			),
+			array(
+				'key' => 'field_65322f035c94a',
+				'label' => 'Pinterest',
+				'name' => 'pinterest',
+				'aria-label' => '',
+				'type' => 'url',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+				'placeholder' => '',
+			),
 		),
 		'location' => array(
 			array(
