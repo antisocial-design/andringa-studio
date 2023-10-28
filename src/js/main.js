@@ -13,7 +13,8 @@ const init = () => {
   if (document.querySelector("#hero.product-slider")) {
     jQuery("#hero.product-slider").slick({
       infinite: true,
-      arrows: true,
+      dots: true,
+      arrows: false,
       autoplay: true,
       autoplaySpeed: 3000,
       fade: true,
@@ -82,13 +83,18 @@ const init = () => {
   }
 
   jQuery(document).ready(function ($) {
+    var isHeaderScrolled = false; // Variable to track the state
+
     $(window).scroll(function () {
       var scroll = $(window).scrollTop();
+      var scrollThreshold = 478;
 
-      if (scroll >= 500) {
+      if (scroll >= scrollThreshold && !isHeaderScrolled) {
         $(".header").addClass("scrolled");
-      } else {
+        isHeaderScrolled = true;
+      } else if (scroll < scrollThreshold && isHeaderScrolled) {
         $(".header").removeClass("scrolled");
+        isHeaderScrolled = false;
       }
     });
   });

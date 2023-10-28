@@ -1,18 +1,12 @@
 {% extends "general.twig" %}
 {% block content %}
 
-	<div class="container py-24">
+	<div class="container py-24 px-16">
 		<div class="grid grid-cols-1 1024:grid-cols-2 gap-8">
 			<div class="col-span-1 gallery-wrapper">
-				<div id="hero" class="product-slider">
-					{% for image in product.get_gallery_image_ids %}
-						<img class="aspect-square object-cover" src="{{ Image(product.image_id).src('large') }}" alt="{{item.project.title}}">
-						{% include 'includes/product-slide.twig' %}
-					{% endfor %}
-
-
+				<div id="hero">
+					<img class="w-full" src="{{ Image(product.image_id).src('large') }}" alt="{{item.project.title}}">
 				</div>
-
 			</div>
 			<div class="col-span-1 product-info-sidebar">
 				<div id="sidebar" class="sidebar">
@@ -20,25 +14,51 @@
 						{% do action('woocommerce_before_single_product') %}
 
 						{% do action('woocommerce_single_product_summary') %}
-
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+		<div class="grid-cols-3 gap-12 mt-24 hidden 1024:grid">
+			{% for image in product.get_gallery_image_ids %}
+				{% if not loop.last %}
+					{% include 'includes/product-slide.twig' %}
+				{% endif %}
+			{% endfor %}
+		</div>
 
-	<div class="container bg-[#F2F2F2] py-24 mb-24">
-		<div class="grid grid-cols-1 1024:grid-cols-2 gap-8">
+		<div class="grid grid-cols-1 mt-24 1024:hidden">
+			<div id="hero" class="product-slider">
+				{% for image in product.get_gallery_image_ids %}
 
-			<div class="col-span-1"><img src="{{ Image(product.image_id).src('large') }}" alt="{{item.project.title}}"></div>
-
-			<div class="col-span-1 py-8">
-				<h6 class="mb-18 product-description-wrapper">
-					{{product.description | wpautop}}
-				</h6>
+					{% include 'includes/product-slide.twig' %}
+				{% endfor %}
 
 			</div>
+		</div>
 
+	</div>
+
+	<div class="bg-white 1024:py-29">
+
+		<div class="container bg-[#F2F2F2] p-16 1024:p-24">
+			<div class="grid grid-cols-1 1024:grid-cols-2 1024:gap-20">
+				<div class="col-span-1 py-8">
+					<h6 class="mb-18 product-description-wrapper">
+						{{product.description | wpautop}}
+					</h6>
+				</div>
+
+				<div class="col-span-1 hidden 1024:block">{% set gallery_image_ids = product.get_gallery_image_ids %}
+
+					{% if gallery_image_ids|length > 0 %}
+						{% set last_image_id = gallery_image_ids|last %}
+						{% set last_image = TimberImage(last_image_id) %}
+						<img src="{{ last_image.src }}" alt="{{ last_image.alt }}">
+					{% endif %}
+				</div>
+
+
+			</div>
 		</div>
 	</div>
 

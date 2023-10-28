@@ -365,7 +365,6 @@ a h6 {
     width: 100px;
     text-align: center;
     height: 100%;
-    margin-right: 1rem;
   }
   .single_add_to_cart_button {
     padding: 1rem;
@@ -390,12 +389,18 @@ a h6 {
 }
 
 .product-wrapper {
+  .hovered {
+    opacity: 0;
+  }
   img {
     transition: 0.3s ease-in-out;
   }
   &:hover {
-    img {
-      filter: brightness(0.8);
+    .default {
+      opacity: 0;
+    }
+    .hovered {
+      opacity: 1;
     }
   }
 }
@@ -430,4 +435,42 @@ a h6 {
     position: relative;
     display: block;
   }
+}
+
+.quantity {
+  background: #fff;
+  margin-right: 1rem;
+  padding: 0rem 2rem;
+}
+
+.slick-dots li {
+  margin: 0 !important;
+  width: 12px;
+}
+
+.slick-dots li button {
+  padding: 0 !important;
+  width: 8px;
+}
+
+.slick-dots li button:before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  background: transparent;
+  border: 1px solid #8e8e8c;
+  position: relative;
+  display: block;
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 1;
+}
+
+.slick-dots li.slick-active button:before {
+  background: #8e8e8c;
+}
+
+.slick-dots {
+  bottom: -50px;
 }

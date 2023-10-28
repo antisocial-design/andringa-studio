@@ -683,10 +683,6 @@ video {
   margin-bottom: 5rem;
 }
 
-.mb-24 {
-  margin-bottom: 6rem;
-}
-
 .mb-28 {
   margin-bottom: 7rem;
 }
@@ -733,6 +729,10 @@ video {
 
 .mt-20 {
   margin-top: 5rem;
+}
+
+.mt-24 {
+  margin-top: 6rem;
 }
 
 .mt-4 {
@@ -815,6 +815,10 @@ video {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .place-content-between {
   place-content: space-between;
 }
@@ -892,6 +896,15 @@ video {
 
 .p-15 {
   padding: 3.75rem;
+}
+
+.p-16 {
+  padding: 4rem;
+}
+
+.px-16 {
+  padding-left: 4rem;
+  padding-right: 4rem;
 }
 
 .py-12 {
@@ -2952,13 +2965,14 @@ article a{
 
 .footer .socials span{
   margin-left:0rem;
-  margin-right:1.5rem
+  margin-right:1.5rem;
+  margin-bottom:0.5rem
 }
 
 @media screen and (min-width: 1024px){
   .footer .socials span{
-    margin-right:0;
-    margin-left:1.5rem
+    margin-left:0;
+    margin-right:1.5rem
   }
 }
 
@@ -3019,8 +3033,7 @@ a h6{
 .cart .quantity input{
   width:100px;
   text-align:center;
-  height:100%;
-  margin-right:1rem
+  height:100%
 }
 
 .cart .single_add_to_cart_button{
@@ -3044,12 +3057,20 @@ a h6{
   height:37px
 }
 
+.product-wrapper .hovered{
+  opacity:0
+}
+
 .product-wrapper img{
   transition:0.3s ease-in-out
 }
 
-.product-wrapper:hover img{
-  filter:brightness(0.8)
+.product-wrapper:hover .default{
+  opacity:0
+}
+
+.product-wrapper:hover .hovered{
+  opacity:1
 }
 
 .product-description-wrapper p{
@@ -3076,6 +3097,44 @@ a h6{
   background-position:center;
   position:relative;
   display:block
+}
+
+.quantity{
+  background:#fff;
+  margin-right:1rem;
+  padding:0rem 2rem
+}
+
+.slick-dots li{
+  margin:0 !important;
+  width:12px
+}
+
+.slick-dots li button{
+  padding:0 !important;
+  width:8px
+}
+
+.slick-dots li button:before{
+  content:"";
+  width:7px;
+  height:7px;
+  background:transparent;
+  border:1px solid #8e8e8c;
+  position:relative;
+  display:block;
+  border-radius:50%;
+  left:50%;
+  transform:translateX(-50%);
+  opacity:1
+}
+
+.slick-dots li.slick-active button:before{
+  background:#8e8e8c
+}
+
+.slick-dots{
+  bottom:-50px
 }
 
 .hover\:font-bold:hover {
@@ -3169,8 +3228,16 @@ a h6{
     margin-top: 10rem;
   }
 
+  .\31 024\:block {
+    display: block;
+  }
+
   .\31 024\:flex {
     display: flex;
+  }
+
+  .\31 024\:grid {
+    display: grid;
   }
 
   .\31 024\:hidden {
@@ -3201,6 +3268,10 @@ a h6{
     gap: 4rem;
   }
 
+  .\31 024\:gap-20 {
+    gap: 5rem;
+  }
+
   .\31 024\:gap-x-16 {
     -moz-column-gap: 4rem;
          column-gap: 4rem;
@@ -3220,6 +3291,15 @@ a h6{
 
   .\31 024\:border-t-0 {
     border-top-width: 0px;
+  }
+
+  .\31 024\:p-24 {
+    padding: 6rem;
+  }
+
+  .\31 024\:py-29 {
+    padding-top: 7.25rem;
+    padding-bottom: 7.25rem;
   }
 
   .\31 024\:pt-32 {
