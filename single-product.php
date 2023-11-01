@@ -24,49 +24,17 @@ $context = init_timber();
 
 $product = wc_get_product(get_the_ID());
 
-$related = $product->get_upsell_ids();
+$args = array(
+    'post_type' => array('product'),
+    'posts_per_page' => 3,
+    'post_count' => 3,
+    'post_status' => 'publish',
+    'orderby' => 'rand',
+    'order' => 'rand',
+    'post__not_in' => array(get_the_ID()),
+  );
 
-if($related && count($related) < 4){
-
-    $per_page = (int) 4 - count($related);
-
-    $excludes = $related;
-    array_push($excludes, get_the_ID());
-
-    $extra_posts = get_posts([
-        'post_type' => 'product',
-        'post__not_in' => $excludes,
-        'numberposts' => $per_page,
-        'post_status' => 'publish',
-        'orderby' => 'rand',
-        'fields' => 'ids'
-    ]);
-
-    foreach($extra_posts as $extra_post){
-        array_push($related, $extra_post);
-    }
-    
-    $filled_related = get_posts([
-        'post_type' => 'product',
-        'numberposts' => 4,
-        'post_status' => 'publish',
-        'orderby' => 'rand',
-        'post__not_in' => array(get_the_ID()),
-        'post__in' => $related,
-    ]);
-
-    $related_items = $filled_related;
-
-}elseif($related && count($related) >= 4){
-    $related_items = $related; 
-}else{
-    $related_items = get_posts(['post_type' => 'product',
-        'posts_per_page' => 4,
-        'post_status' => 'publish',
-        'orderby' => 'rand',
-        'post__not_in' => array(get_the_ID()),
-    ]);
-}
+$context['related'] = Timber::get_posts( $args );
 
 if($product->is_type('variable')){
     $product = new WC_Product_Variable(get_the_ID());

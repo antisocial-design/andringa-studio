@@ -3137,6 +3137,11 @@ a h6{
   bottom:-50px
 }
 
+.direct_checkout{
+  background:#ddca95 !important;
+  margin-left:1rem
+}
+
 .hover\:font-bold:hover {
   font-weight: 700;
 }
