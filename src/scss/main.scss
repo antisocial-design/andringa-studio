@@ -479,3 +479,13 @@ a h6 {
   background: #ddca95 !important;
   margin-left: 1rem;
 }
+
+.childmenu {
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease-in-out;
+  &.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}

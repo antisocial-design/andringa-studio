@@ -83,19 +83,23 @@ const init = () => {
   }
 
   jQuery(document).ready(function ($) {
-    var isHeaderScrolled = false; // Variable to track the state
+    $(document).ready(function () {
+      var lastScrollTop = 0;
+      var header = $(".header");
 
-    $(window).scroll(function () {
-      var scroll = $(window).scrollTop();
-      var scrollThreshold = 478;
+      $(window).scroll(function () {
+        var currentScrollTop = $(this).scrollTop();
 
-      if (scroll >= scrollThreshold && !isHeaderScrolled) {
-        $(".header").addClass("scrolled");
-        isHeaderScrolled = true;
-      } else if (scroll < scrollThreshold && isHeaderScrolled) {
-        $(".header").removeClass("scrolled");
-        isHeaderScrolled = false;
-      }
+        // Check if the user is scrolling down and past 500px
+        if (currentScrollTop > 500) {
+          header.addClass("scrolled");
+        } else if (currentScrollTop < 400) {
+          // Check if the user is scrolling up and after 400px from the top
+          header.removeClass("scrolled");
+        }
+
+        lastScrollTop = currentScrollTop;
+      });
     });
   });
 
@@ -116,7 +120,11 @@ const init = () => {
       $(".hamburger").click(function () {
         $(this).toggleClass("is-active");
         $(".mobile-menu").toggleClass("active");
+        $(".childmenu").removeClass("active");
         // $("body,html").toggleClass("overflow-hidden");
+      });
+      $(".open-childmenu").click(function () {
+        $(".childmenu").addClass("active");
       });
     });
   });

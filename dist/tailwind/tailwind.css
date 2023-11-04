@@ -636,6 +636,10 @@ video {
   z-index: 20;
 }
 
+.z-50 {
+  z-index: 50;
+}
+
 .order-1 {
   order: 1;
 }
@@ -799,8 +803,16 @@ video {
   height: 100%;
 }
 
+.max-h-\[80vh\] {
+  max-height: 80vh;
+}
+
 .w-full {
   width: 100%;
+}
+
+.w-screen {
+  width: 100vw;
 }
 
 .max-w-lg {
@@ -960,6 +972,10 @@ video {
 
 .pt-52 {
   padding-top: 13rem;
+}
+
+.pb-4 {
+  padding-bottom: 1rem;
 }
 
 .text-center {
@@ -3140,6 +3156,17 @@ a h6{
 .direct_checkout{
   background:#ddca95 !important;
   margin-left:1rem
+}
+
+.childmenu{
+  opacity:0;
+  pointer-events:none;
+  transition:0.3s ease-in-out
+}
+
+.childmenu.active{
+  opacity:1;
+  pointer-events:auto
 }
 
 .hover\:font-bold:hover {

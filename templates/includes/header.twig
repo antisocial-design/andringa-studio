@@ -31,14 +31,21 @@
 </div>
 
 <div class="mobile-menu z-10 bg-white py-20">
-	<div class="h-full flex">
-		<div class="mobile-menu-wrapper mt-auto w-full">
+	<div class="h-full flex bg-white z-50">
+
+		<div class="mobile-menu-wrapper relative mt-auto w-full">
 			<div class="col-span-1">
 				<div class="text-container text-right">
 					{% for item in main_menu.get_items %}
-						<a class="main menu-item font-bold" href="{{ item.link }}">
-							<h1>{{item.title}}</h1>
-						</a>
+						{% if item.children %}
+							<a class="main menu-item font-bold open-childmenu" href="#">
+								<h1>{{item.title}}</h1>
+							</a>
+						{% else %}
+							<a class="main menu-item font-bold" href="{{ item.link }}">
+								<h1>{{item.title}}</h1>
+							</a>
+						{% endif %}
 					{% endfor %}
 				</div>
 			</div>
@@ -65,6 +72,19 @@
 						</a>
 					</div>
 				</div>
+			</div>
+		</div>
+		<div class="absolute flex h-full w-screen bg-white childmenu">
+			<div class="text-container my-auto max-h-[80vh] w-full text-center">
+				{% for item in main_menu.get_items %}
+					{% if item.children %}
+						{% for child in item.children %}
+							<a class="main" href="{{ child.link }}">
+								<h4 class="mb-4">{{child.title}}</h4>
+							</a>
+						{% endfor %}
+					{% endif %}
+				{% endfor %}
 			</div>
 		</div>
 
