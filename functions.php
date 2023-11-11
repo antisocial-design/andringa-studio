@@ -101,7 +101,7 @@ function add_content_after_addtocart()
 
     // run only on simple products
     if ($product->is_type('simple')) {
-        echo '<a href="' . $checkout_url . '?add-to-cart=' . $current_product_id . '" class="single_add_to_cart_button button alt direct_checkout">' . pll_e('Buy now') . '</a>';
+        echo '<a href="' . $checkout_url . '?add-to-cart=' . $current_product_id . '" class="single_add_to_cart_button button alt direct_checkout">' . pll__('Buy now') . '</a>';
     }
 }
 add_action('woocommerce_after_add_to_cart_button', 'add_content_after_addtocart');
