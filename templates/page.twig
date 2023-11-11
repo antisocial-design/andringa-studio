@@ -2,6 +2,18 @@
 
 {% block content %}
 
-{{post.content}}
+
+	<div class="container my-12 1024:my-36">
+		<div class="grid grid-cols-2 gap-20">
+			<div class="col-span-2 text-container">
+
+				<h1 class="mb-12">{{post.title}}</h1>
+
+				{{post.content}}
+
+			</div>
+		</div>
+	</div>
+
 
 {% endblock %}

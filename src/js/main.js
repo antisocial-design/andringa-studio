@@ -114,6 +114,10 @@ const init = () => {
     Fancybox.bind('[data-fancybox="gallery"]', {
       //
     });
+
+    Fancybox.bind('[data-fancybox="gallery-products"]', {
+      //
+    });
   });
   jQuery(document).ready(function ($) {
     $(document).ready(function () {

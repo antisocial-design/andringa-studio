@@ -5,7 +5,9 @@
 		<div class="grid grid-cols-1 1024:grid-cols-2 gap-8">
 			<div class="col-span-1 gallery-wrapper">
 				<div id="hero">
-					<img class="w-full" src="{{ Image(product.image_id).src('large') }}" alt="{{item.project.title}}">
+					<a href="{{ Image(product.image_id).src('full') }}" data-fancybox="gallery-products">
+						<img class="w-full" src="{{ Image(product.image_id).src('large') }}" alt="{{item.project.title}}">
+					</a>
 				</div>
 			</div>
 			<div class="col-span-1 product-info-sidebar">
@@ -21,7 +23,9 @@
 		<div class="grid-cols-3 gap-12 mt-24 hidden 1024:grid">
 			{% for image in product.get_gallery_image_ids %}
 				{% if not loop.last %}
-					{% include 'includes/product-slide.twig' %}
+					<a href="{{ Image(image).src('full') }}" data-fancybox="gallery-products">
+						{% include 'includes/product-slide.twig' %}
+					</a>
 				{% endif %}
 			{% endfor %}
 		</div>
@@ -29,8 +33,9 @@
 		<div class="grid grid-cols-1 mt-24 1024:hidden">
 			<div id="hero" class="product-slider">
 				{% for image in product.get_gallery_image_ids %}
-
-					{% include 'includes/product-slide.twig' %}
+					<a href="{{ Image(image).src('full') }}" data-fancybox="gallery-products">
+						{% include 'includes/product-slide.twig' %}
+					</a>
 				{% endfor %}
 
 			</div>
@@ -53,7 +58,7 @@
 					{% if gallery_image_ids|length > 0 %}
 						{% set last_image_id = gallery_image_ids|last %}
 						{% set last_image = TimberImage(last_image_id) %}
-						<img src="{{ last_image.src }}" alt="{{ last_image.alt }}">
+						<img class="w-full" src="{{ last_image.src }}" alt="{{ last_image.alt }}">
 					{% endif %}
 				</div>
 
