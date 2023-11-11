@@ -63,7 +63,8 @@
 
 		<div class="container p-16 1024:p-24">
 			<h5 class="font-bold mb-12 1024:mb-24">{{ fn('pll__', 'Other Suggestions') }}</h5>
-			<div class="grid grid-cols-1 1024:grid-cols-3">
+			<div class="grid grid-cols-1 1024:grid-cols-3  gap-8 1024:gap-x-16 1024:gap-y-24 text-container">
+
 				{% for product in related %}
 					{% include 'loop/product.twig' %}
 				{% endfor %}
