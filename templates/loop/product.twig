@@ -6,10 +6,8 @@
 <div class="product-wrapper col-span-1" data-cat="{% for category in product.get_terms('product_cat') %}{{category.ID}}{{ not loop.last ? ',' }}{% endfor %}">
 	<a href="{{product.link}}" class="block aspect-square relative product-thumbnail">
 		{% if isNew %}
-
 			<div class="absolute top-0 left-0 bg-[#ED1D25] px-8 z-1 py-2">
 				<p class="text-white">{{ fn('pll__', 'new') }}</p>
-
 			</div>
 		{% endif %}
 
