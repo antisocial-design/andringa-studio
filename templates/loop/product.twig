@@ -1,6 +1,18 @@
-<div class="product-wrapper col-span-1" data-cat="{% for category in product.get_terms('product_cat') %}{{category.ID}}{{ not loop.last ? ',' }}{% endfor %}">
+{% set productDate = product.post_date|date('Y-m-d H:i:s')|date('U') %}
+{% set isNew = (date()|date('U') - productDate) < (30 * 24 * 60 * 60) %}
+{% set productPrice = product._price %}
 
+
+<div class="product-wrapper col-span-1" data-cat="{% for category in product.get_terms('product_cat') %}{{category.ID}}{{ not loop.last ? ',' }}{% endfor %}">
 	<a href="{{product.link}}" class="block aspect-square relative product-thumbnail">
+		{% if isNew %}
+
+			<div class="absolute top-0 left-0 bg-[#ED1D25] px-8 z-1 py-2">
+				<p class="text-white">{{ fn('pll__', 'new') }}</p>
+
+			</div>
+		{% endif %}
+
 		<img class="default absolute w-full h-full object-cover object-center" src="{{Image(product.thumbnail).src}}">
 		{% if product._product_image_gallery %}
 			<img class="hovered absolute w-full h-full object-cover object-center" src="{{Image(product._product_image_gallery | split(',') | first).src}}">
@@ -14,10 +26,8 @@
 	<a href="{{product.link}}" class="flex mt-4 place-content-between">
 		<h6 class=" max-w-lg">{{product.title}}</h6>
 		<h6>
-			{{product._regular_price}}
+			{{ productPrice|number_format(2, ',', ' ') }}
 			{{' '}}€</h6>
-
-
 	</a>
 
 </div>

@@ -77,6 +77,7 @@ pll_register_string('andringa-studio', 'Ver Todos');
 pll_register_string('andringa-studio', 'Contacts');
 pll_register_string('andringa-studio', 'Other Suggestions');
 pll_register_string('andringa-studio', 'Buy now');
+pll_register_string('andringa-studio', 'new');
 
 add_action('template_redirect', 'custom_cart_redirect');
 function custom_cart_redirect()
