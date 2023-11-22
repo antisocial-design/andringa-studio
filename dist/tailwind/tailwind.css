@@ -624,12 +624,16 @@ video {
   position: sticky;
 }
 
+.left-0 {
+  left: 0px;
+}
+
 .top-0 {
   top: 0px;
 }
 
-.left-0 {
-  left: 0px;
+.z-1 {
+  z-index: 1;
 }
 
 .z-10 {
@@ -642,14 +646,6 @@ video {
 
 .z-50 {
   z-index: 50;
-}
-
-.z-30 {
-  z-index: 30;
-}
-
-.z-1 {
-  z-index: 1;
 }
 
 .order-1 {
@@ -893,6 +889,11 @@ video {
   border-color: rgb(142 142 140 / var(--tw-border-opacity));
 }
 
+.bg-\[\#ED1D25\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(237 29 37 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#F2F2F2\] {
   --tw-bg-opacity: 1;
   background-color: rgb(242 242 242 / var(--tw-bg-opacity));
@@ -911,11 +912,6 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#ED1D25\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(237 29 37 / var(--tw-bg-opacity));
 }
 
 .object-cover {
@@ -941,9 +937,19 @@ video {
   padding-right: 4rem;
 }
 
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .py-12 {
   padding-top: 3rem;
   padding-bottom: 3rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .py-20 {
@@ -974,21 +980,6 @@ video {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-
-.px-8 {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.py-2 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
 }
 
 .pt-18 {
