@@ -7,7 +7,8 @@
 	<a href="{{product.link}}" class="block aspect-square relative product-thumbnail">
 		{% if isNew %}
 			<div class="absolute top-0 left-0 bg-[#ED1D25] px-4 z-1 ">
-				<p class="text-white">{{ fn('pll__', 'new') }}</p>
+				<p class="text-white new-badge">{{ fn('pll__', 'new') }}</p>
+
 			</div>
 		{% endif %}
 

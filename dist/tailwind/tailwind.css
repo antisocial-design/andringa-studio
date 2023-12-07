@@ -872,6 +872,10 @@ video {
   gap: 2rem;
 }
 
+.whitespace-nowrap {
+  white-space: nowrap;
+}
+
 .border {
   border-width: 1px;
 }
@@ -945,11 +949,6 @@ video {
 .py-12 {
   padding-top: 3rem;
   padding-bottom: 3rem;
-}
-
-.py-2 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
 }
 
 .py-20 {
@@ -3191,6 +3190,12 @@ a h6{
 .childmenu.active{
   opacity:1;
   pointer-events:auto
+}
+
+.new-badge{
+  font-size:3.5rem !important;
+  line-height:4rem !important;
+  margin-bottom:0.4rem
 }
 
 .hover\:font-bold:hover {
